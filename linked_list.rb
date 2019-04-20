@@ -4,12 +4,16 @@ class Node
         @next = nil
         @previous = nil
     end
+
+    def to_s
+        return @value
+    end
     
     attr_accessor :value, :next, :previous
 end
 
 class LinkedList
-    def initialize()
+    def initialize
         @first = nil
         @last = nil
         @length = 0
@@ -45,8 +49,7 @@ class LinkedList
     def to_s
         node = @first
         until node.nil?
-            puts "node: #{node.value}, next: #{if node.next.nil? == false then node.next.value end}, \
-previous: #{if node.previous.nil? == false then node.previous.value end}"
+            puts "node: #{node.to_s}, next: #{node.next.to_s}, previous: #{node.previous.to_s}"
             node = node.next
         end
     end
