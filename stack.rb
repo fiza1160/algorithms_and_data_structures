@@ -1,10 +1,5 @@
 require_relative "linked_list"
 
-# linked_list = LinkedList.new
-# linked_list.add_last(6)
-# linked_list.add_last(2)
-# puts linked_list
-
 class Stack
     def initialize
         @items = LinkedList.new
